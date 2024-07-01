@@ -20,5 +20,7 @@
     opengl.driSupport32Bit = true;
   };
 
+  networking.hostName = "pc-de-nicolas";
+
   system.stateVersion = "23.11";
 }

@@ -20,7 +20,7 @@
           config.allowUnfree = true;
         };
       in {
-        pc-de-nicolas = nixpkgs.lib.nixosSystem {
+        desktop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit system pkgs; };
           modules = [
             catppuccin.nixosModules.catppuccin
