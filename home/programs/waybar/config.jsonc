@@ -1,0 +1,87 @@
+[
+  {
+    "bluetooth": {
+      "format": "",
+      "format-connected": " {device_alias}",
+      "format-disabled": "",
+      "on-click": "blueberry",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "clock": {
+      "actions": {
+        "on-click-backward": "tz_down",
+        "on-click-forward": "tz_up",
+        "on-click-right": "mode",
+        "on-scroll-down": "shift_down",
+        "on-scroll-up": "shift_up"
+      },
+      "calendar": {
+        "format": {
+          "days": "<span color='#ecc6d9'><b>{}</b></span>",
+          "months": "<span color='#ffead3'><b>{}</b></span>",
+          "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+          "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+          "weeks": "<span color='#99ffdd'><b>W{}</b></span>"
+        },
+        "mode": "year",
+        "mode-mon-col": 3,
+        "on-scroll": 1,
+        "weeks-pos": "right"
+      },
+      "format": "{:%H:%M}",
+      "format-alt": "{:%A, %B %d, %Y (%R)}",
+      "tooltip-format": "\n<span size='8pt' font='RobotoMono Nerd Font'>{calendar}</span>"
+    },
+    "custom/logo": {
+      "format": ""
+    },
+    "custom/separator": {
+      "format": " "
+    },
+    "heigh": 40,
+    "layer": "top",
+    "modules-center": [
+      "clock"
+    ],
+    "modules-left": [
+      "custom/logo",
+      "hyprland/workspaces",
+      "custom/separator",
+      "hyprland/window"
+    ],
+    "modules-right": [
+      "bluetooth",
+      "pulseaudio",
+      "tray"
+    ],
+    "pulseaudio": {
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-icons": {
+        "car": "",
+        "default": [
+          "",
+          ""
+        ],
+        "hands-free": "",
+        "headphone": "",
+        "headset": "",
+        "phone": "",
+        "phone-muted": "",
+        "portable": ""
+      },
+      "format-muted": "",
+      "ignored-sinks": [
+        "Easy Effects Sink"
+      ],
+      "on-click": "pavucontrol",
+      "scroll-step": 1
+    },
+    "tray": {
+      "show-passive-items": true,
+      "spacing": 10
+    }
+  }
+]
