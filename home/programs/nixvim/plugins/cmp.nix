@@ -18,11 +18,11 @@
           };
           snippet = {
             expand =
-              ''function(args) vim.fn["vsnip#anonymous"](args.body) end'';
+              "function(args) require('luasnip').lsp_expand(args.body) end";
           };
           sources = [
             { name = "nvim_lsp"; }
-            { name = "vsnip"; }
+            { name = "luasnip"; }
             { name = "path"; }
             { name = "buffer"; }
           ];
@@ -32,8 +32,8 @@
       cmp-buffer.enable = true;
       cmp-path.enable = true;
       cmp-cmdline.enable = true;
-      cmp-vsnip.enable = true;
+      cmp_luasnip.enable = true;
+      luasnip.enable = true;
     };
-    extraPlugins = with pkgs.vimPlugins; [ vim-vsnip ];
   };
 }
