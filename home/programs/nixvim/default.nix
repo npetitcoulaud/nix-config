@@ -25,7 +25,6 @@
           nvimtree = true;
           treesitter = true;
           telescope.enabled = true;
-          dashboard = true;
         };
         styles = {
           booleans = [ "bold" "italic" ];
@@ -49,6 +48,5 @@
     ./plugins/bufferline.nix
     ./plugins/nvim-colorizer.nix
     ./plugins/transparent.nix
-    ./plugins/dashboard.nix
   ];
 }
