@@ -83,12 +83,8 @@
     hyprpaper = {
       enable = true;
       settings = {
-        preload = [
-          "~/.wallpapers/anime-girl-dj-4k-wallpaper-uhdpaper.com-905@0@i.jpg"
-        ];
-        wallpaper = [
-          ",~/.wallpapers/anime-girl-dj-4k-wallpaper-uhdpaper.com-905@0@i.jpg"
-        ];
+        preload = [ "~/.wallpapers/nix.png" ];
+        wallpaper = [ ",~/.wallpapers/nix.png" ];
       };
     };
   };

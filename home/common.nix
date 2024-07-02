@@ -5,7 +5,10 @@
   imports = [ ./programs/fish ./programs/btop ./programs/k9s ];
 
   programs = {
-    direnv.enable = true;
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
     git = {
       enable = true;
       userName = "Nicolas Petitcoulaud";

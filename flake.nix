@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin }:
+  outputs = { self, nixpkgs, home-manager, catppuccin, nixvim }:
     let username = "npetitcoulaud";
     in {
       nixosConfigurations = let
@@ -34,6 +38,7 @@
                 imports = [
                   ./hosts/desktop/home.nix
                   catppuccin.homeManagerModules.catppuccin
+                  nixvim.homeManagerModules.nixvim
                 ];
               };
             }
