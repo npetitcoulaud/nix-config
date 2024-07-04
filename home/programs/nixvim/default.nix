@@ -1,8 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.nixvim = {
     enable = true;
+    extraPackages = with pkgs; [ ripgrep ];
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
@@ -10,7 +11,7 @@
     opts = {
       tabstop = 2;
       shiftwidth = 2;
-      expandtab = false;
+      expandtab = true;
     };
     colorschemes.catppuccin = {
       enable = true;
