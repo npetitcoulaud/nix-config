@@ -18,6 +18,5 @@
       sidebar-mode = true;
     };
     catppuccin.enable = true;
-    #theme = ./catppuccin-mocha.rasi;
   };
 }
