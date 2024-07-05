@@ -27,10 +27,7 @@
 
   # Services
   services = {
-    xserver = {
-      enable = true;
-      xkb.layout = "fr";
-    };
+    xserver.xkb.layout = "fr";
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;

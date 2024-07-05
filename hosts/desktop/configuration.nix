@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -10,15 +10,9 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware = {
-    nvidia = {
-      modesetting.enable = true;
-      nvidiaSettings = false;
-    };
-    opengl.driSupport32Bit = true;
-  };
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  hardware.opengl.extraPackages = with pkgs; [ amdvlk ];
+  hardware.cpu.amd.updateMicrocode = true;
 
   networking.hostName = "pc-de-nicolas";
 

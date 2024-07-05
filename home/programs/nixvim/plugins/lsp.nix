@@ -3,6 +3,9 @@
 {
   programs.nixvim.plugins.lsp = {
     enable = true;
+    onAttach = ''
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+    '';
     servers = {
       nil-ls.enable = true;
       terraformls = {
