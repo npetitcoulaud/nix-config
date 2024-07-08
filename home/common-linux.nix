@@ -3,6 +3,8 @@
 {
   imports = [ ./common.nix ];
 
+  programs.firefox.enable = true;
+
   home.packages = with pkgs; [
     webcord
     teams-for-linux
@@ -10,5 +12,7 @@
     libreoffice
     nfs-utils
     gimp
+    google-chrome
+    vlc
   ];
 }

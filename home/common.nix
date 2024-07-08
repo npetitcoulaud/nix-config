@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -14,14 +14,11 @@
       userName = "Nicolas Petitcoulaud";
       userEmail = "nicolas.petitcoulaud@aqr8.fr";
     };
-    firefox.enable = true;
   };
 
   fonts.fontconfig.enable = true;
 
   home = {
-    username = username;
-    homeDirectory = "/home/" + username;
     stateVersion = "23.11";
     packages = with pkgs; [
       # Tools
@@ -42,11 +39,9 @@
 
       # Soft
       openfortivpn
-      google-chrome
       wireshark
       drawio
       spotify
-      vlc
       slack
     ];
 

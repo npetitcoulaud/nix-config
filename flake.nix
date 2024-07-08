@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, nixvim }:
+  outputs = { self, nixpkgs, home-manager, catppuccin, nixvim, nix-darwin }:
     let username = "npetitcoulaud";
     in {
       nixosConfigurations = let
@@ -45,6 +49,32 @@
           ];
         };
       };
+      darwinConfigurations = let
+        system = "x86_64-darwin";
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      in {
+        macbook = nix-darwin.lib.darwinSystem {
+          specialArgs = { inherit self system pkgs; };
+          modules = [
+            ./hosts/macbook/configuration.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit pkgs username; };
+              home-manager.users.${username} = {
+                imports = [
+                  ./hosts/macbook/home.nix
+                  catppuccin.homeManagerModules.catppuccin
+                  nixvim.homeManagerModules.nixvim
+                ];
+              };
+            }
+          ];
+        };
+      };
     };
-
 }
