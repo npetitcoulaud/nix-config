@@ -9,5 +9,6 @@
     inetutils
     libreoffice
     nfs-utils
+    gimp
   ];
 }

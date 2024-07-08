@@ -17,7 +17,11 @@
       };
       gopls.enable = true;
       yamlls.enable = true;
-      #rust-analyzer.enable = true;
+      rust-analyzer = {
+        enable = true;
+        installCargo = true;
+        installRustc = true;
+      };
       jsonls.enable = true;
       helm-ls.enable = true;
       dockerls.enable = true;
