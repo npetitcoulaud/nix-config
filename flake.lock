@@ -304,11 +304,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1720514121,
-        "narHash": "sha256-Q8M0edc6oMZhuAd/zRhVX13jigUmuyiBRa5WmFhn0Rk=",
+        "lastModified": 1720514328,
+        "narHash": "sha256-dYcDwpiqdmkpk26FU1Uqj9sZ2DOb/lQai/m/6ulJJRc=",
         "owner": "npetitcoulaud",
         "repo": "openfortivpn-webview-qt",
-        "rev": "2808d25ff17a51493d2d4d2a0d5915dc77b55571",
+        "rev": "2b404f01cdb9b00b41ece391551f1adc537e53ce",
         "type": "github"
       },
       "original": {
