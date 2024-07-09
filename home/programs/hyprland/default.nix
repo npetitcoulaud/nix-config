@@ -124,6 +124,9 @@
         ", XF86AudioPause, exec, playerctl play-pause"
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPrev, exec, playerctl previous"
+        "$mainMod, PRINT, exec, hyprshot -m window"
+        ", PRINT, exec, hyprshot -m output"
+        "$shiftMod, PRINT, exec, hyprshot -m region"
       ];
 
       bindm = [
@@ -265,6 +268,7 @@
     hyprcursor
     kdePackages.polkit-kde-agent-1
     kdePackages.qtwayland
+    hyprshot
     pamixer
     playerctl
     pavucontrol
