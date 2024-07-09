@@ -16,9 +16,12 @@
       url = "github:nix-community/nixvim/nixos-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    openfortivpn-webview-qt.url =
+      "github:npetitcoulaud/openfortivpn-webview-qt";
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, nixvim, nix-darwin }:
+  outputs = { self, nixpkgs, home-manager, catppuccin, nixvim, nix-darwin
+    , openfortivpn-webview-qt }:
     let username = "npetitcoulaud";
     in {
       nixosConfigurations = let
@@ -37,7 +40,9 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit pkgs username; };
+              home-manager.extraSpecialArgs = {
+                inherit system pkgs openfortivpn-webview-qt username;
+              };
               home-manager.users.${username} = {
                 imports = [
                   ./hosts/desktop/home.nix
