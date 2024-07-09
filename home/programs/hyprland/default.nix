@@ -66,6 +66,7 @@
       exec-once = [
         "waybar"
         "dunst"
+        "copyq --start-server"
         "${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1"
       ];
       "$terminal" = "kitty";
@@ -263,9 +264,11 @@
     blueberry
     hyprcursor
     kdePackages.polkit-kde-agent-1
+    kdePackages.qtwayland
     pamixer
     playerctl
     pavucontrol
+    copyq
     gnome.nautilus
     gnome.eog
     gnome.simple-scan
