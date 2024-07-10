@@ -136,7 +136,7 @@
 
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "float,class:(pavucontrol|blueberry|org.keepassxc.KeePassXC|org.gnome.Nautilus)"
+        "float,class:(pavucontrol|blueberry|org.keepassxc.KeePassXC|org.gnome.Nautilus|eog)"
         "workspace 3,title:^(Outlook)(.*)$"
         "workspace 4,class:(WebCord|teams-for-linux|Slack)"
       ];

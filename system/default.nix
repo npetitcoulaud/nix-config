@@ -5,6 +5,7 @@
 
   # Boot
   boot = {
+    tmp.cleanOnBoot = true;
     kernelPackages = pkgs.linuxPackages_6_8;
     loader = {
       systemd-boot.enable = true;
