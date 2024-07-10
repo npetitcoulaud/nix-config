@@ -19,7 +19,6 @@
   fonts.fontconfig.enable = true;
 
   home = {
-    stateVersion = "23.11";
     packages = with pkgs; [
       # Tools
       keepassxc
