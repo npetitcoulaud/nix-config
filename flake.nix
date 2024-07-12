@@ -18,10 +18,6 @@
     };
     openfortivpn-webview-qt.url =
       "github:npetitcoulaud/openfortivpn-webview-qt";
-    tpkgs = {
-      url = "path:./nixpks";
-      flake = false;
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, nixvim, nix-darwin
