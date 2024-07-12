@@ -101,7 +101,14 @@
       };
 
     };
-    resolved.enable = true;
+    resolved = {
+      enable = true;
+      extraConfig = ''
+        [Resolve]
+        DNS=10.30.0.73 10.30.0.74 10.30.0.75
+        Domains=~oodrive.group
+      '';
+    };
     rpcbind.enable = true;
   };
 

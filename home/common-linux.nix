@@ -6,7 +6,7 @@
   programs.firefox.enable = true;
 
   home.packages = with pkgs; [
-    webcord
+    vesktop
     teams-for-linux
     inetutils
     libreoffice

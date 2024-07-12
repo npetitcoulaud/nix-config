@@ -138,7 +138,7 @@
         "suppressevent maximize, class:.*"
         "float,class:(pavucontrol|blueberry|org.keepassxc.KeePassXC|org.gnome.Nautilus|eog)"
         "workspace 3,title:^(Outlook)(.*)$"
-        "workspace 4,class:(WebCord|teams-for-linux|Slack)"
+        "workspace 4,class:(teams-for-linux|Slack|vesktop)"
       ];
 
       workspace = [
@@ -216,7 +216,6 @@
       };
     };
     fish = {
-      shellAliases = { ssh = "kitten ssh"; };
       shellInit = ''
         set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
       '';
