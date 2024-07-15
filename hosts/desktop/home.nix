@@ -13,5 +13,6 @@
     ../../home/programs/nixvim
     ../../home/programs/starship
     ../../home/programs/zellij
+    ../../home/programs/remmina
   ];
 }
