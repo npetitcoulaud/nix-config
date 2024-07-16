@@ -9,12 +9,24 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  hardware.opengl.extraPackages = with pkgs; [ amdvlk ];
-  hardware.cpu.amd.updateMicrocode = true;
-
   networking.hostName = "pc-de-nicolas";
+
+  # AMD Drivers
+  services.xserver = {
+    enable = true;
+    videoDrivers = [ "amdgpu" ];
+  };
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  hardware = {
+    cpu.amd.updateMicrocode = true;
+    opengl = {
+      extraPackages = with pkgs; [ amdvlk rocmPackages.clr.icd ];
+      extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+  };
+  environment.variables.AMD_VULKAN_ICD = "RADV";
 
   system.stateVersion = "24.05";
 }
