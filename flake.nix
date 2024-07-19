@@ -53,6 +53,28 @@
             }
           ];
         };
+        laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit system pkgs; };
+          modules = [
+            catppuccin.nixosModules.catppuccin
+            ./hosts/laptop/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit system pkgs openfortivpn-webview-qt username;
+              };
+              home-manager.users.${username} = {
+                imports = [
+                  ./hosts/laptop/home.nix
+                  catppuccin.homeManagerModules.catppuccin
+                  nixvim.homeManagerModules.nixvim
+                ];
+              };
+            }
+          ];
+        };
       };
       darwinConfigurations = let
         system = "x86_64-darwin";
