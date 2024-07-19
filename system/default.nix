@@ -16,7 +16,6 @@
       luks.devices."nixos" = {
         allowDiscards = true;
         keyFileSize = 4096;
-        keyFile = "/dev/sdb";
       };
     };
   };

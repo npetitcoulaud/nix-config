@@ -28,5 +28,8 @@
   };
   environment.variables.AMD_VULKAN_ICD = "RADV";
 
+  # KeyFile
+  boot.initrd.luks.devices."nixos".keyFile = "/dev/sdb";
+
   system.stateVersion = "24.05";
 }
