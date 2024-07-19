@@ -62,7 +62,11 @@
       };
       misc = { disable_hyprland_logo = true; };
       master = { new_status = "master"; };
-      monitor = [ "DP-1,1920x1080,0x0, 1" "HDMI-A-1,1920x1080,1920x0, 1" ];
+      monitor = [
+        "DP-1,1920x1080,0x0, 1"
+        "HDMI-A-1,1920x1080,1920x0, 1"
+        "eDP-1,1920x1200,0x0,1"
+      ];
       exec-once = [
         "waybar"
         "dunst"
