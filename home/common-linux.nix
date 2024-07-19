@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     vesktop
+    zoom-us
     teams-for-linux
     inetutils
     libreoffice
