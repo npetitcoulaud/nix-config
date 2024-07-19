@@ -16,6 +16,7 @@
       luks.devices."nixos" = {
         allowDiscards = true;
         keyFileSize = 4096;
+        fallbackToPassword = true;
       };
     };
   };
