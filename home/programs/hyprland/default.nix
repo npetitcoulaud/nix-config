@@ -55,6 +55,7 @@
         kb_layout = "fr";
         numlock_by_default = true;
         sensitivity = -0.5;
+        touchpad = { clickfinger_behavior = true; };
       };
       dwindle = {
         pseudotile = true;
@@ -159,14 +160,7 @@
 
   gtk = {
     enable = true;
-    theme = {
-      package = pkgs.sweet;
-      name = "Sweet-Ambar-Blue-v40";
-    };
-    iconTheme = {
-      package = pkgs.candy-icons;
-      name = "candy-icons";
-    };
+    theme = { name = "Space-dark"; };
   };
 
   programs = {
