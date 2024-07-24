@@ -255,22 +255,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1720386169,
-        "narHash": "sha256-NGKVY4PjzwAa4upkGtAMz1npHGoRzWotlSnVlqI40mo=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "194846768975b7ad2c4988bdb82572c00222c0d7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -299,21 +283,23 @@
         "type": "github"
       }
     },
-    "openfortivpn-webview-qt": {
+    "npepkgs": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1720514328,
-        "narHash": "sha256-dYcDwpiqdmkpk26FU1Uqj9sZ2DOb/lQai/m/6ulJJRc=",
+        "lastModified": 1721809857,
+        "narHash": "sha256-Z/Q7bbvHaXFF5Hukx42gG/YLITSVu/0zR5ewL/B4AmY=",
         "owner": "npetitcoulaud",
-        "repo": "openfortivpn-webview-qt",
-        "rev": "2b404f01cdb9b00b41ece391551f1adc537e53ce",
+        "repo": "npepkgs",
+        "rev": "3c8e89c54f134c89957206239b3a7d7628eb2476",
         "type": "github"
       },
       "original": {
         "owner": "npetitcoulaud",
-        "repo": "openfortivpn-webview-qt",
+        "repo": "npepkgs",
         "type": "github"
       }
     },
@@ -324,7 +310,7 @@
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "openfortivpn-webview-qt": "openfortivpn-webview-qt"
+        "npepkgs": "npepkgs"
       }
     },
     "systems": {
