@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, npepkgs, system, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -160,7 +160,14 @@
 
   gtk = {
     enable = true;
-    theme = { name = "Space-dark"; };
+    theme = {
+      package = npepkgs.packages.${system}.space-theme;
+      name = "Space-transparency";
+    };
+    iconTheme = {
+      package = pkgs.colloid-icon-theme;
+      name = "Colloid-dark";
+    };
   };
 
   programs = {

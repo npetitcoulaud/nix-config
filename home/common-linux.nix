@@ -1,4 +1,4 @@
-{ pkgs, openfortivpn-webview-qt, system, ... }:
+{ pkgs, npepkgs, system, ... }:
 
 {
   imports = [ ./common.nix ];
@@ -15,6 +15,8 @@
     gimp
     google-chrome
     vlc
-    openfortivpn-webview-qt.packages.${system}.default
+    npepkgs.packages.${system}.openfortivpn-webview-qt
+    #openfortivpn-webview-qt.packages.${system}.default
+
   ];
 }
