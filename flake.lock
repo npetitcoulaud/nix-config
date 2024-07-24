@@ -290,11 +290,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1721811348,
-        "narHash": "sha256-3QhwvAoquRiqfAvM6FCzR5W+sRK6pWkGSGfiSJc3Cgk=",
+        "lastModified": 1721813149,
+        "narHash": "sha256-eyWJ3NE9FeGM+bXmRd99k6CwHJYekeeB/K4ykr8k5+k=",
         "owner": "npetitcoulaud",
         "repo": "npepkgs",
-        "rev": "49be3cacb44be895f8e19181d18813dec193bf98",
+        "rev": "5396af47ba812804c2fa061ce1ccc9e2541535d6",
         "type": "github"
       },
       "original": {
