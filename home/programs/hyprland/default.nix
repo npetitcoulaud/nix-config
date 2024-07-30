@@ -18,7 +18,7 @@
         border_size = 2;
         gaps_in = 5;
         gaps_out = 10;
-        "col.active_border" = "$mauve $lavender 45deg";
+        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
         resize_on_border = false;
         allow_tearing = false;
@@ -231,8 +231,10 @@
     hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/.wallpapers/nix.png" ];
-        wallpaper = [ ",~/.wallpapers/nix.png" ];
+        preload =
+          [ "${npepkgs.packages.${system}.wallpapers}/Anime-Girl1.png" ];
+        wallpaper =
+          [ ",${npepkgs.packages.${system}.wallpapers}/Anime-Girl1.png" ];
       };
     };
     hypridle = {

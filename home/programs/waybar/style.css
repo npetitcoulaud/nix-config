@@ -1,75 +1,55 @@
 * {
-	font-size: 16px;
-	font-family: "Ubuntu Nerd Font";
+  font-size: 16px;
+  font-family: "Ubuntu Nerd Font";
 }
 
 window#waybar {
-	background-color: transparent;
+  background-color: transparent;
 }
 
-.modules-left {
-	margin: 10px 0 5px 20px;
-	padding: 5px 10px 5px 10px;
-	background: #000000;
-	border-radius: 30px;
-	color: white;
-	box-shadow: 1px 1px 2px 1px rgba(26, 26, 26, 0.93);
-}
-
-.modules-center {
-	margin: 10px 10px 5px 10px;
-	padding: 5px 10px 5px 10px;
-	background: #000000;
-	border-radius: 30px;
-	color: white;
-	box-shadow: 1px 1px 2px 1px rgba(26, 26, 26, 0.93);
-}
-
-.modules-right {
-	margin: 10px 20px 5px 0;
-	padding: 5px 10px 5px 10px;
-	background: #000000;
-	border-radius: 30px;
-	color: white;
-	box-shadow: 1px 1px 2px 1px rgba(26, 26, 26, 0.93);
+window#waybar>box {
+  margin-bottom: 2px;
+  background-color: rgba(29, 29, 29, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  padding: 2px;
 }
 
 #custom-logo {
-	color: #89b4fa;
-	font-size: 24px;
-	padding: 0 5px 0 5px;
+  color: #89b4fa;
+  font-size: 24px;
+  padding: 0 5px 0 5px;
 }
 
 #workspaces {
-	padding: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
 }
 
 #workspaces button {
-	color: grey;
+  color: grey;
 }
 
 
 #workspaces button.active {
-	color: white;
+  color: white;
 }
 
 #custom-separator {
-	color: violet;
-	padding: 0 5px 0 5px;
+  color: rgba(51, 204, 255, 0.93);
+  padding: 0 5px 0 5px;
 }
 
 #window {
-	padding: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
 }
 
 #bluetooth {
-	padding: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
 }
 
 #pulseaudio {
-	padding: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
 }
 
 #tray {
-	padding: 0 5px 0 10px;
+  padding: 0 5px 0 10px;
 }
