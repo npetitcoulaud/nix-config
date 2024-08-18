@@ -16,6 +16,8 @@
     google-chrome
     vlc
     npepkgs.packages.${system}.openfortivpn-webview-qt
+    corefonts
+    vistafonts
     #openfortivpn-webview-qt.packages.${system}.default
 
   ];
